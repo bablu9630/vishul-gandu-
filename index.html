@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding-top: 100px;
+            position: relative;
+            animation: backgroundChange 10s infinite;
+            transition: all 0.5s ease;
+        }
+
+        @keyframes backgroundChange {
+            0% { background-color: #ffeb3b; }
+            25% { background-color: #ff5722; }
+            50% { background-color: #4caf50; }
+            75% { background-color: #2196f3; }
+            100% { background-color: #9c27b0; }
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #ff6347;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        button:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.7);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        #giftImage {
+            display: none;
+            width: 300px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideIn 1s ease-out;
+        }
+
+        #giftImage img {
+            width: 100%;
+            border-radius: 10px;
+            animation: glow 1s ease-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.7); }
+            100% { box-shadow: 0 0 30px rgba(255, 69, 0, 1); }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .emoji-container {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 40px;
+            animation: bounce 1.5s infinite;
+        }
+
+        .emoji-container:last-child {
+            left: auto;
+            right: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-50%);
+            }
+            50% {
+                transform: translateY(-60%);
+            }
+        }
+
+        .heart-animation {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            animation: heartPulse 1s infinite;
+            z-index: -1;
+        }
+
+        @keyframes heartPulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="emoji-container">👯‍♂️👯‍♀️</div>
+
+    <button id="giftButton">Bablu ki taraf se Vishal ko ek chota sa gift</button>
+
+    <div id="giftImage">
+        <img src="middle-finger-icon-emoji-free-png.webp" alt="Gift Image">
+    </div>
+
+    <div class="heart-animation">❤️</div>
+
+    <div class="emoji-container" style="right: 10px;">👯‍♂️👯‍♀️</div>
+
+    <script>
+        document.getElementById('giftButton').addEventListener('click', function() {
+            document.getElementById('giftImage').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
